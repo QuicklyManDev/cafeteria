@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'CafeteriaE')
+@section('title', 'Inicio - Cafetería Escolar')
 
 @section('content')
 <div class="text-center">
