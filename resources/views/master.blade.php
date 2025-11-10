@@ -3,33 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Cafe107')</title>
+    <title>@yield('title', 'Cafete107')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #fafafa;
+            background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
         .navbar {
-            background-color: #8b4513;
+            background: linear-gradient(90deg, #4a148c, #880e4f);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeDown 1s ease-out;
         }
-        .navbar-brand, .nav-link {
+        .navbar-brand {
             color: #fff !important;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease;
         }
-        footer {
-            background-color: #8b4513;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 30px;
+        .navbar-brand:hover {
+            transform: scale(1.1);
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .container {
+            animation: fadeUp 1.2s ease-in-out;
+        }
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    {{-- Menú superior --}}
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}"> Cafe107</a>
+            <a class="navbar-brand" href="{{ url('/') }}">Cafe107</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,10 +80,6 @@
     <div class="container mt-5">
         @yield('content')
     </div>
-
-    <footer>
-        <p>&copy; {{ date('Y') }} Cafetería Escolar. Todos los derechos reservados.</p>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
