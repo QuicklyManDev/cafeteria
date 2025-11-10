@@ -1,12 +1,12 @@
 @extends('master')
 
-@section('title', 'Inicio - Cafetería Escolar')
+@section('title', 'cafe107')
 
 @section('content')
 <div class="text-center">
-    <h1 class="mb-4">Bienvenidos a la Cafetería Escolar ☕</h1>
+    <h1 class="mb-4">Bienvenidos a la Cafe107 ☕</h1>
     <p class="lead">
-        Disfruta de nuestros deliciosos desayunos, bebidas calientes y snacks pensados especialmente para estudiantes y personal docente.
+        La cafeina es vida...
     </p>
 
     <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" 
