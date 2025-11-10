@@ -1,33 +1,38 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Cafete107')</title>
+    <title>@yield('title', 'Cafe107')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+            background: linear-gradient(135deg, #4b2e05, #8d5524, #c3976f);
             font-family: 'Poppins', sans-serif;
+            color: #fff8e1;
             min-height: 100vh;
             overflow-x: hidden;
+            animation: bgShift 10s infinite alternate ease-in-out;
         }
         .navbar {
-            background: linear-gradient(90deg, #4a148c, #880e4f);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(90deg, #3e2723, #6d4c41, #b8860b);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             animation: fadeDown 1s ease-out;
         }
         .navbar-brand {
-            color: #fff !important;
-            font-weight: bold;
+            color: #f7d08a !important;
+            font-weight: 700;
             letter-spacing: 1px;
-            transition: transform 0.3s ease;
+            text-shadow: 0 0 10px rgba(247, 208, 138, 0.6);
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
         }
         .navbar-brand:hover {
             transform: scale(1.1);
+            text-shadow: 0 0 20px rgba(247, 208, 138, 0.9);
         }
         .nav-link {
-            color: #fff !important;
+            color: #fff8e1 !important;
             font-weight: 500;
             position: relative;
             transition: color 0.3s ease;
@@ -39,11 +44,14 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #fff;
+            background: #f7d08a;
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
             width: 100%;
+        }
+        .nav-link:hover {
+            color: #f7d08a !important;
         }
         .container {
             animation: fadeUp 1.2s ease-in-out;
@@ -55,6 +63,10 @@
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bgShift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
         }
     </style>
 </head>
