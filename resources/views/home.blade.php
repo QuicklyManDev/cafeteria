@@ -9,7 +9,7 @@
         La cafeina es vida...
     </p>
 
-    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" 
+    <img src="https://st2.depositphotos.com/2631505/5462/i/450/depositphotos_54626107-stock-photo-happy-businessman-holding-funny-huge.jpg" 
          class="img-fluid rounded mt-4" 
          alt="Cafetería escolar" 
          style="max-height: 400px; object-fit: cover;">
