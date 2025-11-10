@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="text-center">
-    <h1 class="mb-4">Bienvenidos a la Cafe107</h1>
+    <h1 class="mb-4">Bienvenidos al Cafe107</h1>
     <p class="lead">
         La cafeina es vida...
     </p>
