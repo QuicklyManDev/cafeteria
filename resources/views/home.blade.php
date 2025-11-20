@@ -15,8 +15,8 @@
          style="max-height: 400px; object-fit: cover;">
 
     <div class="mt-5">
-        <a href="#" class="btn btn-primary btn-lg me-3">Hacer Pedido</a>
-        <a href="#" class="btn btn-outline-secondary btn-lg">Ver Menú</a>
+        <a href="{{ url('/ordenarProductos') }}" class="btn btn-primary btn-lg me-3">Hacer Pedido</a>
+        <a href="{{ url('/ordenarProductos') }}" class="btn btn-outline-secondary btn-lg">Ver Menú</a>
     </div>
 </div>
 @endsection
