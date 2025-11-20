@@ -1,8 +1,8 @@
 @extends('master')
 
-@section('title', 'cafe107')
+@section('titulo', 'cafe107')
 
-@section('content')
+@section('contenido')
 <div class="text-center">
     <h1 class="mb-4">Bienvenidos al Cafe107</h1>
     <p class="lead">
