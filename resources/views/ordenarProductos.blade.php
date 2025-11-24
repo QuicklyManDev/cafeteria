@@ -5,7 +5,7 @@
 @stop
 
 @section('titulo')
-  <h1>Ordenar Productos</h1>
+  Ordenar Productos
 @stop
 
 @section('contenido')
