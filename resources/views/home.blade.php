@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('titulo', 'cafe107')
+@section('titulo', 'Cafe107')
 
 @section('contenido')
 <div class="text-center">
