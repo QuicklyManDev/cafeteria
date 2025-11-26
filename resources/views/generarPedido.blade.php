@@ -45,8 +45,11 @@
             <td>{{ $ordenados -> cantidad }}</td>
             <td>{{ $ordenados -> precio * $ordenados -> cantidad }}</td>
             <td>
-                <a href="" class="btn btn-primary btn-sm">+</a>
-                <a href="" class="btn btn-secondary btn-sm">-</a>
+                <a href="{{ url('/ordenadoMas') }}/{{$ordenados->id}}"
+                    class="btn btn-primary btn-sm">+</a>
+                <a href="{{ url('/ordenadoMenos') }}/{{$ordenados->id}}"
+                    class="btn btn-primary btn-sm">-</a>
+
             </td>
         </tr>
         @php

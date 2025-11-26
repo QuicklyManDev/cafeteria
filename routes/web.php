@@ -15,3 +15,9 @@ Route::get('/generarPedido',
 
 Route::get('/agregarProducto/{id}',
   [PedidoController::class,'agregarProducto']);
+
+Route::get('/ordenadoMas/{id}',
+  [PedidoController::class,'masCantidad']);
+
+Route::get('/ordenadoMaenos/{id}',
+  [PedidoController::class,'menosCantidad']);

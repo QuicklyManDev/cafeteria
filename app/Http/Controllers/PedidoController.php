@@ -22,4 +22,22 @@ class PedidoController extends Controller
         $ordenado->save();
         return redirect('/ordenarProductos');
     }
+
+     public function masCantidad($id){
+        $ordenado = Ordenado::find($id);
+        $ordenado->cantidad += 1;
+        $ordenado->save();
+        return redirect('/generarPedido');
+    }
+
+     public function menosCantidad($id){
+        $ordenado = Ordenado::find($id);
+        $ordenado->cantidad -= 1;
+        if ($ordenado->cantidad < 1){
+            $ordenado->delete();
+        }
+        $ordenado->save();
+        return redirect('/generarPedido');
+    }
+
 }
