@@ -39,7 +39,7 @@
             <td>{{ $ordenados -> nombre }}</td>
             <td>
               <img style="width: 100px; height: 60px;"
-               src="{{ asset('img/'.$ordenados->imagen) }}" alt="" />
+               src="{{ asset($ordenados->imagen) }}"/>
             </td>
             <td>{{ $ordenados -> precio }}</td>
             <td>{{ $ordenados -> cantidad }}</td>

@@ -40,7 +40,7 @@
             </td>
 
             <td>
-                <a href="{{ url('/agregarProducto/' }}/{{$producto->id)}}"
+                <a href="{{ url('/agregarProducto/') }}/{{$producto->id}}"
                     class="btn btn-primary btn-sm">Agregar</a>
             </td>
         </tr>
