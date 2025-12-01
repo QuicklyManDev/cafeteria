@@ -16,7 +16,7 @@
 
     <div class="mt-5">
         <a href="{{ url('/ordenarProductos') }}" class="btn btn-primary btn-lg me-3">Hacer Pedido</a>
-        <a href="{{ url('/ordenarProductos') }}" class="btn btn-outline-secondary btn-lg">Ver Menú</a>
+        <a href="{{ url('/generarPedido') }}" class="btn btn-success btn-lg me-3">Ir al Carrito</a>
     </div>
 </div>
 @endsection
