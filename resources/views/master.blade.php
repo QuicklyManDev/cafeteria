@@ -83,6 +83,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/ordenarProductos') }}">Hacer pedido</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url('/generarPedido') }}">Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/administrarPedidos') }}">Administrar Pedidos</a></li>
                 </ul>
             </div>
         </div>
