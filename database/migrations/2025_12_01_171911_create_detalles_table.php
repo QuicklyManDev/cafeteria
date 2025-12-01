@@ -16,7 +16,7 @@ return new class extends Migration
             $table->bigInteger('producto_id');
             $table->string('nombre',30);
             $table->integer('precio');
-            $table->string('imagern',30);
+            $table->string('imagen',30);
             $table->integer('cantidad');
             $table->unsignedBigInteger('pedido_id');
             $table->timestamps();

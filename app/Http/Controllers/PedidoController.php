@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pedido;
 use App\Models\Ordenado;
 use App\Models\Producto;
+use App\Models\Detalle;
 use Illuminate\Http\Request;
 
 class PedidoController extends Controller
