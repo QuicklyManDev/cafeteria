@@ -25,5 +25,6 @@ Route::get('/ordenadoMenos/{id}',
 Route::post('/grabarPedido',
   [PedidoController::class,'grabarPedido']);
 
-Route::get('/administrarPedidos', 
-  [PedidoController::class, 'index'])->name('administrarPedidos');
+Route::get('/administrarPedidos', [PedidoController::class, 'getPedidos']);
+
+Route::delete('/eliminarPedido/{pedido}', [PedidoController::class, 'eliminarPedido']);

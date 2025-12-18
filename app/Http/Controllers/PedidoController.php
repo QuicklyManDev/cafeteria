@@ -27,6 +27,17 @@ class PedidoController extends Controller
         return view('generarPedido', compact('ordenado'));
     }
 
+    public function getPedidos(){
+        $pedidos = Pedido::orderBy('id','asc')->get();
+        return view('administrarPedidos', compact('pedidos'));
+    }
+
+    public function eliminarPedido(Pedido $pedido)
+{
+    $pedido->delete();
+    return redirect('/administrarPedidos')->with('success', 'Pedido eliminado correctamente.');
+}
+
      public function masCantidad($id){
         $ordenado = Ordenado::find($id);
         $ordenado->cantidad += 1;
@@ -45,19 +56,14 @@ class PedidoController extends Controller
     }
 
         public function grabarPedido(Request $request){
-        //grabar los datos del pedido
         $pedido = new Pedido();
         $datos = $request->input();
-        //falta verificar que el total no este en cero
         $pedido->nombre= $datos["nombre"];
         $pedido->origen= $datos["origen"];
         $pedido->fecha= now();
         $pedido->total= $datos["total"];
         $pedido->save();
-        //grabar los productos ordenados en detalle
-       
           $ordenado = Ordenado::orderBy('nombre','asc')->get();
-           //recorrer los ordenados
            foreach($ordenado as $ordenados){
               $detalle = new Detalle();
               $detalle->producto_id= $ordenados->id;
@@ -68,7 +74,6 @@ class PedidoController extends Controller
               $detalle->pedido_id= $pedido->id;
               $detalle->save();
            }
-           //eliminar los ordenados
            foreach($ordenado as $ordenados){
                $ordenados->delete();
            }

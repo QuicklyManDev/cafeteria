@@ -17,7 +17,7 @@
     <div class="mt-5">
         <a href="{{ url('/ordenarProductos') }}" class="btn btn-primary btn-lg me-3">Hacer Pedido</a>
         <a href="{{ url('/generarPedido') }}" class="btn btn-success btn-lg me-3">Ir al Carrito</a>
-        <a href="{{ route('administrarPedidos') }}" class="btn btn-danger btn-lg me-3">Administrar Pedidos</a>
+        <a href="{{ url('/administrarPedidos') }}" class="btn btn-danger btn-lg me-3">Administrar Pedidos</a>
     </div>
 </div>
 @endsection
